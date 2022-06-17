@@ -1,7 +1,4 @@
-import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
 import streamlit as st
 st.set_page_config(page_icon = 'logo.png', layout='centered', initial_sidebar_state = 'collapsed', page_title='Census Data')
 @st.cache()
@@ -21,14 +18,6 @@ def load_data():
 	return df
 df = load_data()
 st.header('Census Data')
-#hd =st.checkbox('View Data\'s first 5 rows')
-#st.subheader('\n')
-#en =st.checkbox('View Entire Data')
-#st.subheader('\nData:')
-#if hd:
-#	st.dataframe(df.head())
-#if en:
-#	st.dataframe(df)
 
 if st.checkbox('Show data\'s first 5 rows'):
 	st.table(df.head())
